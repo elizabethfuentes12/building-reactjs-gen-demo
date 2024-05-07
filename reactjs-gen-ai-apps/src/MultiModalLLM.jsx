@@ -35,6 +35,7 @@ export default () => {
 
     const sendImageAndText = async () => {
         const currentModelId = modelPickerRef.current.getModelId()
+        console.log(currentModelId)
         const systemPrompt = promptPickerRef.current.getPrompt()
 
         setLoading(true)
@@ -62,7 +63,7 @@ export default () => {
             header={<Header
                 actions={
                     <SpaceBetween direction="horizontal" size="xs">
-                        <Button onClick={newConversation} >Limpia Conversacion</Button></SpaceBetween>
+                        <Button onClick={newConversation} >New Conversation</Button></SpaceBetween>
                 }
                 description="You can combine images and text in the input"
                 variant="h2">Conversacion</Header>}>
